@@ -1,0 +1,30 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+parts:
+  - caption: Projects
+    chapters:
+    - file: chapter_introductions/Research_Projects
+    - file: chapter_introductions/Course_Projects
+  - caption: Paper Summaries
+    chapters:
+    - file: chapter_introductions/Emotions
+      sections:
+      - file: paper_summaries/simple_foraging_robots_with_emotional_overlay
+    - file: chapter_introductions/Exploration_Curiosity
+      sections:
+      - file: paper_summaries/fractional_binding_in_vector_symbolic_representations
+      - file: paper_summaries/ergodic_exploration_of_distributed_information
+      - file: paper_summaries/realtime_informationtheoretic_exploration_with_gaussian_mixture_model_maps
+    - file: chapter_introductions/Probabilistic_Modelling
+      sections:
+      - file: paper_summaries/a_spiking_neural_bayesian_model_of_life_span_inference
+    - file: chapter_introductions/Context_Dependent_Decision_Making
+      sections:
+      - file: paper_summaries/a_neural_model_of_context_dependent_decision_making_in_the_pfc
+    - file: chapter_introductions/Memory
+      sections:
+      - file: paper_summaries/generalizable_knowledge_outweighs_incidential_details
+
