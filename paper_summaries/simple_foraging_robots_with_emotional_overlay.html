@@ -1,0 +1,661 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Effect of Reward Prediction Errors on the Emotional State of a Mobile Robot &#8212; Computational Neuroscience Research</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e2363ea40746bee74734a24ffefccd78.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Exploration and Curiosity" href="../chapter_introductions/Exploration_Curiosity.html" />
+    <link rel="prev" title="Emotions" href="../chapter_introductions/Emotions.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Computational Neuroscience Research</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Welcome to my Computational Neuroscience Research Portfolio
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Projects
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_introductions/Research_Projects.html">
+   Research Projects
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_introductions/Course_Projects.html">
+   Course Projects
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Paper Summaries
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../chapter_introductions/Emotions.html">
+   Emotions
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Effect of Reward Prediction Errors on the Emotional State of a Mobile Robot
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../chapter_introductions/Exploration_Curiosity.html">
+   Exploration and Curiosity
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="fractional_binding_in_vector_symbolic_representations.html">
+     Fractional Binding in Vector Symbolic Representations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ergodic_exploration_of_distributed_information.html">
+     Ergodic Exploration of Distributed Information
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="realtime_informationtheoretic_exploration_with_gaussian_mixture_model_maps.html">
+     Real-time Information-Theoretic Exploration with Gaussian Mixture Model Maps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../chapter_introductions/Probabilistic_Modelling.html">
+   Probabilistic Modelling
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="a_spiking_neural_bayesian_model_of_life_span_inference.html">
+     A Spiking Neural Bayesian Model of Life Span Inference
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../chapter_introductions/Context_Dependent_Decision_Making.html">
+   Context Dependent Decision Making
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="a_neural_model_of_context_dependent_decision_making_in_the_pfc.html">
+     A Neural Model of Context Dependent Decision Making in the Prefrontal Cortex
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../chapter_introductions/Memory.html">
+   Memory
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="generalizable_knowledge_outweighs_incidential_details.html">
+     Generalizable knowledge outweighs incidental details in prefrontal ensemble code over time
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/paper_summaries/simple_foraging_robots_with_emotional_overlay.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/CommPewTayShunAllNewRowSighEnts/computational-neuroscience-portfolio"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/CommPewTayShunAllNewRowSighEnts/computational-neuroscience-portfolio/issues/new?title=Issue%20on%20page%20%2Fpaper_summaries/simple_foraging_robots_with_emotional_overlay.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#paper-review">
+   Paper Review
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-is-are-the-researcher-s-doing">
+     What is(are) the researcher(s) doing?
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#model-details">
+       Model Details
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#action-selection-mechanism-asm">
+         Action Selection Mechanism (ASM)
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#emotions-engine">
+         Emotions Engine
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#emotions-and-temperament-constants">
+         Emotions and Temperament Constants
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#short-term-memory">
+         Short Term Memory
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#reward-prediction-error-rpe-module">
+         Reward Prediction Error (RPE) Module
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#command-modifier">
+         Command Modifier
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#why-did-they-do-it-that-way">
+     Why did they do it that way?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-are-other-ways-of-doing-it">
+     What are other ways of doing it?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#how-is-it-useful-to-me">
+     How is it useful to me?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#background-literature">
+     Background Literature
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#r-w-picard-2000">
+       R.W. Picard (2000)
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#breazeal-and-brooks-2005">
+       Breazeal and Brooks (2005)
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#paul-ekman-1999">
+       Paul Ekman (1999)
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#jack-et-al-2015">
+       Jack et al. (2015)
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#rutledge-et-al-2014">
+       Rutledge et al. (2014)
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#long-et-al-2015-and-long-2015">
+       Long et al. (2015) and Long (2015)
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#troy-d-kelley-2006">
+       Troy D. Kelley (2006)
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#surendran-2015">
+       Surendran (2015)
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="effect-of-reward-prediction-errors-on-the-emotional-state-of-a-mobile-robot">
+<h1>Effect of Reward Prediction Errors on the Emotional State of a Mobile Robot<a class="headerlink" href="#effect-of-reward-prediction-errors-on-the-emotional-state-of-a-mobile-robot" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="paper-review">
+<h2>Paper Review<a class="headerlink" href="#paper-review" title="Permalink to this headline">¶</a></h2>
+<p><strong>Paper:</strong> <a class="reference external" href="http://acs.ist.psu.edu/iccm2016/proceedings/surendran2016iccm.pdf">Surendran, V. &amp; Long, N.L. (2016) </a></p>
+<div class="section" id="what-is-are-the-researcher-s-doing">
+<h3>What is(are) the researcher(s) doing?<a class="headerlink" href="#what-is-are-the-researcher-s-doing" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>developing a mobile robot that has a dynamic action selection mechanism which incorporates a model for emotions and temperment.</p></li>
+<li><p>the robot recreates the scenario of an animal foraging for food while avoiding predators.</p></li>
+<li><p>Four emotions were modelled:</p>
+<ul>
+<li><p>anger</p></li>
+<li><p>fear</p></li>
+<li><p>happiness</p></li>
+<li><p>surprise</p></li>
+</ul>
+</li>
+<li><p>Emotions were affected by:</p>
+<ul>
+<li><p>finding food</p></li>
+<li><p>encountering a predator</p></li>
+<li><p>encountering a boundary wall</p></li>
+<li><p>finding a safe area</p></li>
+<li><p>being in a state of low health</p></li>
+</ul>
+</li>
+<li><p>The model incorporated a reward prediction module that altered the effect of an event based on the error between when an event occurred and when it was predicted to occur.</p></li>
+<li><p>The model also included a decay term that resulted in the emotions returning to their steady state values unless there was continual reinforcement through the occurrence of events.</p></li>
+<li><p>The effect of differing temperaments on the emotions was studied by defining an irate temperament.</p></li>
+</ul>
+<div class="section" id="model-details">
+<h4>Model Details<a class="headerlink" href="#model-details" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="action-selection-mechanism-asm">
+<h5>Action Selection Mechanism (ASM)<a class="headerlink" href="#action-selection-mechanism-asm" title="Permalink to this headline">¶</a></h5>
+</div>
+<div class="section" id="emotions-engine">
+<h5>Emotions Engine<a class="headerlink" href="#emotions-engine" title="Permalink to this headline">¶</a></h5>
+</div>
+<div class="section" id="emotions-and-temperament-constants">
+<h5>Emotions and Temperament Constants<a class="headerlink" href="#emotions-and-temperament-constants" title="Permalink to this headline">¶</a></h5>
+</div>
+<div class="section" id="short-term-memory">
+<h5>Short Term Memory<a class="headerlink" href="#short-term-memory" title="Permalink to this headline">¶</a></h5>
+</div>
+<div class="section" id="reward-prediction-error-rpe-module">
+<h5>Reward Prediction Error (RPE) Module<a class="headerlink" href="#reward-prediction-error-rpe-module" title="Permalink to this headline">¶</a></h5>
+</div>
+<div class="section" id="command-modifier">
+<h5>Command Modifier<a class="headerlink" href="#command-modifier" title="Permalink to this headline">¶</a></h5>
+</div>
+</div>
+</div>
+<div class="section" id="why-did-they-do-it-that-way">
+<h3>Why did they do it that way?<a class="headerlink" href="#why-did-they-do-it-that-way" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>By adapting a model for momentary well-being (Rutledge et al., 2014) as done by Long et al. (2015), and incorporating a reward prediction error, an action selection mechanism with an integrated emotions engine has been implemented in addition to the development of a low cost robot to test the mechanism (Surendan, 2015).</p></li>
+<li><p>The ASM developed was a hybrid of a goal-based and a dynamic planning action selection mechanism.</p></li>
+<li><p>Each goal was associated with subgoals, and each subgoal with a dynamic plan.</p></li>
+<li><p>Different events were defined that affected the individual emotions and the ASM provided means by which the emotional state could be used to modify the internal state of the robot through means of command modifiers</p></li>
+<li><p>Command modifiers also allowed the modification of dynamic plans and the value of emotions to be coupled through suitable models.</p></li>
+<li><p>Temperaments and emotional variability were defined using a matrix of constants.</p></li>
+<li><p>Varying the temperaments was observed to result in a different emotional state over the time period of the experiment even when the scenario was kept constant.</p></li>
+<li><p>Finally, the importance of the reward prediction error was highlighted by showing that without it events affected the emotions by the same amount regardless of when they occurred.</p></li>
+<li><p>With the RPE, it was possible to mimic the emotional response observed in humans by Rutledge et al (2014).</p></li>
+</ul>
+</div>
+<div class="section" id="what-are-other-ways-of-doing-it">
+<h3>What are other ways of doing it?<a class="headerlink" href="#what-are-other-ways-of-doing-it" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Additional tests should be conducted by</p>
+<ul>
+<li><p>specifying a more comprehensive list of command modifiers and</p></li>
+<li><p>fine tuning the temperament values based on the observation of an animal foraging for food in the wild</p></li>
+</ul>
+</li>
+<li><p>Since the temperament is specified by means of constants shown in Table 1, this leads to the possibility of an agent with a time-variant temperament that can alter its emotional sensitivity during run time</p></li>
+<li><p>The emotional model could also be modified to introduce a time lag between the occurrence of an event and it affecting the emotional state.</p>
+<ul>
+<li><p>This would allow the simulation of the four classic temperaments, theorized by Greek philosophers (“Four Humors - And there’s the humor of it: Shakespeare and the four humors,” 2012) namely:</p>
+<ul>
+<li><p>melancholic,</p></li>
+<li><p>phlegmatic,</p></li>
+<li><p>choleric, and</p></li>
+<li><p>sanguine</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Another approach would be the specification of the temperament–often described in the literature (Digman, 1990)–in terms of the “Big 5” traits of:
+- extraversion,
+- agreeableness,
+- openness,
+- conscientiousness, and
+- neuroticism</p></li>
+<li><p>incorporating the acquisition of a non-homogeneous robot swarm with varying temperaments to explore if emotions increase the effectiveness of the swarm</p></li>
+</ul>
+</div>
+<div class="section" id="how-is-it-useful-to-me">
+<h3>How is it useful to me?<a class="headerlink" href="#how-is-it-useful-to-me" title="Permalink to this headline">¶</a></h3>
+<p>This paper defines a robot model that could be implemented with Nengo.</p>
+</div>
+<div class="section" id="background-literature">
+<h3>Background Literature<a class="headerlink" href="#background-literature" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="r-w-picard-2000">
+<h4><a class="reference external" href="http://www.macs.hw.ac.uk/~yjc32/project/ref-social%20media%20campaign/1995-affective%20computing.pdf">R.W. Picard (2000)</a><a class="headerlink" href="#r-w-picard-2000" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Affective computing seeks to understand and develop systems that can recognize and simulate human emotions.</p></li>
+<li><p>R.W. Picard (2000) highlighted the importance of the field by exploring neurological studies that indicated human cognition was intrinsically linked with emotions.</p></li>
+<li><p>She also argues that that the development of affective computing is critical to advancing emotion and cognition theory.</p></li>
+</ul>
+</div>
+<div class="section" id="breazeal-and-brooks-2005">
+<h4><a class="reference external" href="https://oxford.universitypressscholarship.com/view/10.1093/acprof:oso/9780195166194.001.0001/acprof-9780195166194-chapter-10">Breazeal and Brooks (2005)</a><a class="headerlink" href="#breazeal-and-brooks-2005" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>considered cognition and emotions to be two distinct systems that evolved in intelligent creatures under social and environmental processes to aid in optimal functioning.</p></li>
+<li><p>Cognition is deemed to be responsible for interpreting the world whereas emotions are deemed to be responsible for evaluating the value of events.</p></li>
+<li><p>Emotions thus help prioritize concerns while minimizing distractions.</p></li>
+</ul>
+</div>
+<div class="section" id="paul-ekman-1999">
+<h4><a class="reference external" href="https://doi.org/10.1002/0470013494.ch3">Paul Ekman (1999)</a><a class="headerlink" href="#paul-ekman-1999" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>The simulation of human emotions is greatly complicated by the fact that there is no accepted model that explains and predicts the wide range of emotions we experience.</p></li>
+<li><p>There still is no consensus in the literature on the number of base emotions.</p></li>
+<li><p>Proposes a list of 15 emotions, each representing a family of emotions.</p></li>
+</ul>
+</div>
+<div class="section" id="jack-et-al-2015">
+<h4><a class="reference external" href="https://doi.org/10.1016/j.cub.2013.11.064">Jack et al. (2015)</a><a class="headerlink" href="#jack-et-al-2015" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>A study on dynamic facial expressions of emotion challenges the notion of (Ekman 1999) by suggesting that basic emotion communication comprises fewer categories.</p></li>
+<li><p>It is clear that our understanding of the subject is still in its infancy.</p></li>
+</ul>
+</div>
+<div class="section" id="rutledge-et-al-2014">
+<h4><a class="reference external" href="https://www.pnas.org/content/111/33/12252">Rutledge et al. (2014)</a><a class="headerlink" href="#rutledge-et-al-2014" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>A study on momentary subjective well-being that resulted in a model of happiness referred to as the ‘Happiness Equation’ in popular culture.</p></li>
+<li><p>They showed that momentary happiness in response to a probabilistic reward is explained by the combined influence of the reward expectations and the prediction errors from the expectations; not by current task earnings as one would naively conclude.</p></li>
+</ul>
+</div>
+<div class="section" id="long-et-al-2015-and-long-2015">
+<h4><a class="reference external" href="https://www.researchgate.net/publication/274384955_An_Emotion_and_Temperament_Model_for_Cognitive_Mobile_Robots">Long et al. (2015)</a> and <a class="reference external" href="http://act-r.psy.cmu.edu/wordpress/wp-content/themes/ACT-R/workshops/2015/long-ACTR_2015a.pdf">Long (2015)</a><a class="headerlink" href="#long-et-al-2015-and-long-2015" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>adapted this model to simulate the eight ‘universal’ emotions of fear, anger, sadness, happiness, disgust, surprise, trust, and interest in cognitive mobile robots.</p></li>
+</ul>
+</div>
+<div class="section" id="troy-d-kelley-2006">
+<h4><a class="reference external" href="https://api.semanticscholar.org/CorpusID:60631110">Troy D. Kelley (2006)</a><a class="headerlink" href="#troy-d-kelley-2006" title="Permalink to this headline">¶</a></h4>
+<p>The emotion and temperament engine developed by (Long, 2015) was incorporated into SS-RICS which is a cognitive architecture developed at the Army Research Laboratory.</p>
+</div>
+<div class="section" id="surendran-2015">
+<h4><a class="reference external" href="https://etda.libraries.psu.edu/files/final_submissions/10871">Surendran (2015)</a><a class="headerlink" href="#surendran-2015" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>built upon (Long et. al., 2015) emotional model by incorporating a reward prediction error component with a focus on developing a model that could be executed with limited computational resources.</p></li>
+<li><p>this model did not use SS-RICS</p></li>
+<li><p>implemented a new action selection mechanism (ASM) capable of running on a small mobile robot with a Raspberry Pi processor.</p></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./paper_summaries"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="../chapter_introductions/Emotions.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Emotions</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="../chapter_introductions/Exploration_Curiosity.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">Exploration and Curiosity</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By Christopher Risi<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
