@@ -3,7 +3,7 @@
 
 ## Paper Review
 
-**Paper:** [Surendran, V. & Long, N.L. (2016) ](http://acs.ist.psu.edu/iccm2016/proceedings/surendran2016iccm.pdf)
+**Paper:** [Surendran, V. & Long, N.L. (2016)](http://acs.ist.psu.edu/iccm2016/proceedings/surendran2016iccm.pdf)
 
 ### What is(are) the researcher(s) doing?
 - developing a mobile robot that has a dynamic action selection mechanism which incorporates a model for emotions and temperment.
@@ -70,7 +70,7 @@
 ### How is it useful to me?
 This paper defines a robot model that could be implemented with Nengo.
 
-### Background Literature
+### Background Literature Review
 
 #### [R.W. Picard (2000)](http://www.macs.hw.ac.uk/~yjc32/project/ref-social%20media%20campaign/1995-affective%20computing.pdf)
 - Affective computing seeks to understand and develop systems that can recognize and simulate human emotions.

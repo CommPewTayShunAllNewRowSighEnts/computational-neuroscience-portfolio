@@ -2,6 +2,8 @@
 
 ## Paper Review 
 
+* **Paper:** [Sharma, S. (2017)](http://compneuro.uwaterloo.ca/publications/sharma2017.html)
+
 ### Literature Review
 
 ### What is the researcher doing?
