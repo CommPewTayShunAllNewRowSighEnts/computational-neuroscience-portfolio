@@ -42,6 +42,8 @@
     <script src="../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -329,19 +331,26 @@
         </a>
        </li>
        <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#short-term-memory">
-         Short Term Memory
+        <a class="reference internal nav-link" href="#components">
+         Components
         </a>
-       </li>
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#reward-prediction-error-rpe-module">
-         Reward Prediction Error (RPE) Module
-        </a>
-       </li>
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#command-modifier">
-         Command Modifier
-        </a>
+        <ul class="nav section-nav flex-column">
+         <li class="toc-h6 nav-item toc-entry">
+          <a class="reference internal nav-link" href="#short-term-memory">
+           Short Term Memory
+          </a>
+         </li>
+         <li class="toc-h6 nav-item toc-entry">
+          <a class="reference internal nav-link" href="#reward-prediction-error-rpe-module">
+           Reward Prediction Error (RPE) Module
+          </a>
+         </li>
+         <li class="toc-h6 nav-item toc-entry">
+          <a class="reference internal nav-link" href="#command-modifier">
+           Command Modifier
+          </a>
+         </li>
+        </ul>
        </li>
       </ul>
      </li>
@@ -457,21 +466,193 @@
 <h4>Model Details<a class="headerlink" href="#model-details" title="Permalink to this headline">¶</a></h4>
 <div class="section" id="action-selection-mechanism-asm">
 <h5>Action Selection Mechanism (ASM)<a class="headerlink" href="#action-selection-mechanism-asm" title="Permalink to this headline">¶</a></h5>
+<p>This mechanism was designed so that</p>
+<ul class="simple">
+<li><p>it allows for the robot to be autonomous and make decisions based on external and internal stimuli.</p></li>
+<li><p>it replicates the required behavior</p></li>
+</ul>
+<p>To fulfill those design needs it used a hybrid architecture of:</p>
+<ul class="simple">
+<li><p><strong>Dynamic planning methods</strong> to determine next action taken</p>
+<ul>
+<li><p>This type of mechanism was chosen because it is ideal when there are limited computational resources</p></li>
+</ul>
+</li>
+<li><p><strong>Goal driven architecture</strong> for replicating desired behaviors</p></li>
+</ul>
+<p>The goals were:</p>
+<ul class="simple">
+<li><p>finding food</p></li>
+<li><p>finding a safe area</p></li>
+<li><p>avoiding danger</p></li>
+<li><p>resting</p></li>
+</ul>
+<p>These goals were decomposed into subgoals:</p>
+<ul class="simple">
+<li><p>finding a ball</p></li>
+<li><p>tracking a ball</p></li>
+<li><p>eating a ball</p></li>
+<li><p>avoiding a ball</p></li>
+<li><p>etc</p></li>
+</ul>
+<p>Each of these subgoals was associated with a dynamic plan that the ASM selects in order to accomplish the goal.</p>
+<p>Condition-action rules similar to those used in expert systems were used to implement the dynamic plans.</p>
+<p>Rules defined the ‘knowledge’ the system possessed and in this system are either factual or procedural.</p>
 </div>
 <div class="section" id="emotions-engine">
 <h5>Emotions Engine<a class="headerlink" href="#emotions-engine" title="Permalink to this headline">¶</a></h5>
+<p>Computational model from Rutledge et al. (2014):</p>
+<p><span class="math notranslate nohighlight">\(
+Happiness(t) = w_0 + w_1 \sum_{j=1}^{t} \gamma^{t-j} CR_{j}  + w_2 \sum_{j=1}^{t} \gamma^{t-j} EV_{j}   + w_3 \sum_{j=1}^{t} \gamma^{t-j} RPE_{j}  
+\)</span></p>
+<ul class="simple">
+<li><p>CR: Certain Rewards</p></li>
+<li><p>EV: Expected Value</p></li>
+<li><p>RPE: Reward Prediction Error</p></li>
+</ul>
+<p>Modified model from Long et al. (2015):</p>
+<p><span class="math notranslate nohighlight">\(
+Emotions(t)_{i} = w_{0_i} + \sum_{j=1}^{t} \gamma_{i}^{t-j} (w_{1_i}R_{ij}^{+}  + w_{2_i}R_{ij}^{-} )
+\)</span></p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(R_{ij}^{+}\)</span>: positive reinforcements</p></li>
+<li><p><span class="math notranslate nohighlight">\(R_{ij}^{-}\)</span>: negative reinforcements</p></li>
+</ul>
+<p>Used in this study:</p>
+<p><span class="math notranslate nohighlight">\(
+Emotions(t)_{i} = w_{0_{i}} + \sum_{j=1}^{n} \gamma_{i}^{t_{f}-t_{j}} w_{1_i}R_{j}  + \sum_{j=1}^{n} \gamma_{i}^{t_{f}-t_{j}} w_{2_i}RPE_{j} 
+\)</span></p>
 </div>
 <div class="section" id="emotions-and-temperament-constants">
 <h5>Emotions and Temperament Constants<a class="headerlink" href="#emotions-and-temperament-constants" title="Permalink to this headline">¶</a></h5>
+<p>Table 1: Emotion constants:</p>
+<table class="table" id="emotion-constants">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Emotion</strong></p></th>
+<th class="head"><p><strong><span class="math notranslate nohighlight">\(w_0\)</span></strong></p></th>
+<th class="head"><p><strong><span class="math notranslate nohighlight">\(w_1\)</span></strong></p></th>
+<th class="head"><p><strong><span class="math notranslate nohighlight">\(w_2\)</span></strong></p></th>
+<th class="head"><p><strong><span class="math notranslate nohighlight">\(\gamma\)</span></strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Anger</strong></p></td>
+<td><p>0</p></td>
+<td><p>1.9</p></td>
+<td><p>0.15</p></td>
+<td><p>0.92</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Fear</strong></p></td>
+<td><p>0</p></td>
+<td><p>1.9</p></td>
+<td><p>0.15</p></td>
+<td><p>0.92</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Happiness</strong></p></td>
+<td><p>0</p></td>
+<td><p>2.3</p></td>
+<td><p>0.15</p></td>
+<td><p>0.92</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Surprise</strong></p></td>
+<td><p>0</p></td>
+<td><p>1.7</p></td>
+<td><p>0.15</p></td>
+<td><p>0.88</p></td>
+</tr>
+</tbody>
+</table>
+<p>Table 2: Emotion modifiers:</p>
+<table class="table" id="emotion-modifiers">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"><p><strong>Anger</strong></p></th>
+<th class="head"><p><strong>Fear</strong></p></th>
+<th class="head"><p><strong>Happiness</strong></p></th>
+<th class="head"><p><strong>Surprise</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Danger Encountered</strong></p></td>
+<td><p>0</p></td>
+<td><p>+12</p></td>
+<td><p>-5</p></td>
+<td><p>+10</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Found Food</strong></p></td>
+<td><p>-1</p></td>
+<td><p>-1</p></td>
+<td><p>+5</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Returned to Safe Area</strong></p></td>
+<td><p>-5</p></td>
+<td><p>-5</p></td>
+<td><p>+5</p></td>
+<td><p>-5</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Wall Encountered</strong></p></td>
+<td><p>+3</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>+5</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Health Too Low</strong></p></td>
+<td><p>0</p></td>
+<td><p>+2</p></td>
+<td><p>-2</p></td>
+<td><p>0</p></td>
+</tr>
+</tbody>
+</table>
 </div>
+<div class="section" id="components">
+<h5>Components<a class="headerlink" href="#components" title="Permalink to this headline">¶</a></h5>
+<p>Three major components:</p>
+<ul class="simple">
+<li><p>short term memory</p></li>
+<li><p>RPE module</p></li>
+<li><p>command modifier</p></li>
+</ul>
 <div class="section" id="short-term-memory">
-<h5>Short Term Memory<a class="headerlink" href="#short-term-memory" title="Permalink to this headline">¶</a></h5>
+<h6>Short Term Memory<a class="headerlink" href="#short-term-memory" title="Permalink to this headline">¶</a></h6>
+<ul class="simple">
+<li><p>The emotional state of an agent is deemed to depend on its internal state and external stimuli such as events.</p></li>
+<li><p>Due to the decay component <span class="math notranslate nohighlight">\(\gamma\)</span> of the emotional model, it was found that a <strong>memory length of six events</strong> was optimal as the
+exponential decay meant that the value of any previous events was negligibly small.</p></li>
+</ul>
 </div>
 <div class="section" id="reward-prediction-error-rpe-module">
-<h5>Reward Prediction Error (RPE) Module<a class="headerlink" href="#reward-prediction-error-rpe-module" title="Permalink to this headline">¶</a></h5>
+<h6>Reward Prediction Error (RPE) Module<a class="headerlink" href="#reward-prediction-error-rpe-module" title="Permalink to this headline">¶</a></h6>
+<ul class="simple">
+<li><p>Momentary subjective well-being was found to depend not only on an event but errors in predicting the occurrence of said event.</p></li>
+<li><p>Unexpected events have a higher impact on the value of an emotion</p></li>
+<li><p>Due to a lack of long term memory and learning capabilities, the average number of time steps taken for an event to occur in the past is used to predict future expectations.</p></li>
+<li><p>The difference between prediction and the actual time taken for the event to occur is considered to be the RPE.</p></li>
+</ul>
 </div>
 <div class="section" id="command-modifier">
-<h5>Command Modifier<a class="headerlink" href="#command-modifier" title="Permalink to this headline">¶</a></h5>
+<h6>Command Modifier<a class="headerlink" href="#command-modifier" title="Permalink to this headline">¶</a></h6>
+<ul class="simple">
+<li><p>Data stored by the short term memory module is sent to the RPE module to calculate the RPE.</p></li>
+<li><p>Using emotional model the instantaneous value of the four emotions are then calculated and in combination define the emotional state of the robot.</p></li>
+<li><p>The command modifier allows the emotions engine to modify the ASM commands generated and the internal state of the agent, based on the current emotional state.</p></li>
+</ul>
+</div>
 </div>
 </div>
 </div>
@@ -479,14 +660,23 @@
 <h3>Why did they do it that way?<a class="headerlink" href="#why-did-they-do-it-that-way" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>By adapting a model for momentary well-being (Rutledge et al., 2014) as done by Long et al. (2015), and incorporating a reward prediction error, an action selection mechanism with an integrated emotions engine has been implemented in addition to the development of a low cost robot to test the mechanism (Surendan, 2015).</p></li>
-<li><p>The ASM developed was a hybrid of a goal-based and a dynamic planning action selection mechanism.</p></li>
+<li><p>The ASM developed was a hybrid of a goal-based and a dynamic planning action selection mechanism.</p>
+<ul>
 <li><p>Each goal was associated with subgoals, and each subgoal with a dynamic plan.</p></li>
 <li><p>Different events were defined that affected the individual emotions and the ASM provided means by which the emotional state could be used to modify the internal state of the robot through means of command modifiers</p></li>
 <li><p>Command modifiers also allowed the modification of dynamic plans and the value of emotions to be coupled through suitable models.</p></li>
-<li><p>Temperaments and emotional variability were defined using a matrix of constants.</p></li>
+</ul>
+</li>
+<li><p>Temperaments and emotional variability were defined using a matrix of constants.</p>
+<ul>
 <li><p>Varying the temperaments was observed to result in a different emotional state over the time period of the experiment even when the scenario was kept constant.</p></li>
-<li><p>Finally, the importance of the reward prediction error was highlighted by showing that without it events affected the emotions by the same amount regardless of when they occurred.</p></li>
+</ul>
+</li>
+<li><p>Finally, the importance of the reward prediction error was highlighted by showing that without it events affected the emotions by the same amount regardless of when they occurred.</p>
+<ul>
 <li><p>With the RPE, it was possible to mimic the emotional response observed in humans by Rutledge et al (2014).</p></li>
+</ul>
+</li>
 </ul>
 </div>
 <div class="section" id="what-are-other-ways-of-doing-it">
@@ -518,6 +708,8 @@
 - conscientiousness, and
 - neuroticism</p></li>
 <li><p>incorporating the acquisition of a non-homogeneous robot swarm with varying temperaments to explore if emotions increase the effectiveness of the swarm</p></li>
+<li><p>the decay component <span class="math notranslate nohighlight">\(\gamma\)</span> could be modified using Nengo’s short-memory module because this model only used a <strong>memory length of six events</strong></p></li>
+<li><p>incorporate long-term memory and learning if the model can successfully be implemented in Nengo</p></li>
 </ul>
 </div>
 <div class="section" id="how-is-it-useful-to-me">
