@@ -2,7 +2,7 @@
 
 ## Paper Review 
 
-### Literature Review
+**Paper:** [Sharma, S. (2016)](http://compneuro.uwaterloo.ca/publications/sharma2016a.html)
 
 ### What is the researcher doing?
 
@@ -12,3 +12,4 @@
 
 ### How is it useful to me?
 
+### Background Literature Review

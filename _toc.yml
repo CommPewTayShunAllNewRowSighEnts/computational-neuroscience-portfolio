@@ -13,6 +13,7 @@ parts:
     - file: chapter_introductions/Emotions
       sections:
       - file: paper_summaries/simple_foraging_robots_with_emotional_overlay
+      - file: paper_summaries/influences_of_emotion_on_learning_and_memory.md
     - file: chapter_introductions/Exploration_Curiosity
       sections:
       - file: paper_summaries/fractional_binding_in_vector_symbolic_representations

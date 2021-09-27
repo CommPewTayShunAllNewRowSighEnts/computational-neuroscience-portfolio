@@ -2,9 +2,7 @@
 
 
 ## Paper Review 
-**Paper**: [Generalizable knowledge outweighs incidental details in prefrontal ensemble code over time](https://elifesciences.org/articles/22177)
-
-### Literature Review
+**Paper**: [Morrissey, M. D. (2017)](https://elifesciences.org/articles/22177)
 
 ### What is the researcher doing?
 
@@ -14,3 +12,4 @@
 
 ### How is it useful to me?
 
+### Background Literature Review
