@@ -19,6 +19,6 @@
 
 ### How is it useful to me?
 - using this to make decisions/select actions using information theoretic objective functions. 
-
+- applying this model to other tasks where humans show poor judgement of bayesian priors.
 
 ### Background Literature Review

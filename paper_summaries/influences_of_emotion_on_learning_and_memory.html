@@ -1,0 +1,721 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Influences of Emotion on Learning and Memory &#8212; Computational Neuroscience Research</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e2363ea40746bee74734a24ffefccd78.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Exploration and Curiosity" href="../chapter_introductions/Exploration_Curiosity.html" />
+    <link rel="prev" title="Effect of Reward Prediction Errors on the Emotional State of a Mobile Robot" href="simple_foraging_robots_with_emotional_overlay.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Computational Neuroscience Research</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Welcome to my Computational Neuroscience Research Portfolio
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Projects
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_introductions/Research_Projects.html">
+   Research Projects
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_introductions/Course_Projects.html">
+   Course Projects
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Paper Summaries
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../chapter_introductions/Emotions.html">
+   Emotions
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="simple_foraging_robots_with_emotional_overlay.html">
+     Effect of Reward Prediction Errors on the Emotional State of a Mobile Robot
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     The Influences of Emotion on Learning and Memory
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../chapter_introductions/Exploration_Curiosity.html">
+   Exploration and Curiosity
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="fractional_binding_in_vector_symbolic_representations.html">
+     Fractional Binding in Vector Symbolic Representations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ergodic_exploration_of_distributed_information.html">
+     Ergodic Exploration of Distributed Information
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="realtime_informationtheoretic_exploration_with_gaussian_mixture_model_maps.html">
+     Real-time Information-Theoretic Exploration with Gaussian Mixture Model Maps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../chapter_introductions/Probabilistic_Modelling.html">
+   Probabilistic Modelling
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="a_spiking_neural_bayesian_model_of_life_span_inference.html">
+     A Spiking Neural Bayesian Model of Life Span Inference
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../chapter_introductions/Context_Dependent_Decision_Making.html">
+   Context Dependent Decision Making
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="a_neural_model_of_context_dependent_decision_making_in_the_pfc.html">
+     A Neural Model of Context Dependent Decision Making in the Prefrontal Cortex
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../chapter_introductions/Memory.html">
+   Memory
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="generalizable_knowledge_outweighs_incidential_details.html">
+     Generalizable knowledge outweighs incidental details in prefrontal ensemble code over time
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/paper_summaries/influences_of_emotion_on_learning_and_memory.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/CommPewTayShunAllNewRowSighEnts/computational-neuroscience-portfolio"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/CommPewTayShunAllNewRowSighEnts/computational-neuroscience-portfolio/issues/new?title=Issue%20on%20page%20%2Fpaper_summaries/influences_of_emotion_on_learning_and_memory.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#paper-review">
+   Paper Review
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-questions-are-the-researchers-trying-to-answer">
+     What questions are the researchers trying to answer?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-is-the-researcher-doing">
+     What is the researcher doing?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#why-did-they-do-it-that-way">
+     Why did they do it that way?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-are-other-ways-of-doing-it">
+     What are other ways of doing it?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#how-is-it-useful-to-me">
+     How is it useful to me?
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#many-opportunities-for-study">
+       Many opportunities for study:
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#background-literature-review">
+     Background Literature Review
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#vuilleumier-2005">
+       Vuilleumier, 2005
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#phelps-2004-um-et-al-2012">
+       Phelps, 2004; Um et al., 2012
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#jung-et-al-2014">
+       Jung et al., 2014
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#isen-et-al-1987">
+       Isen et al., 1987
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#pekrun-1992-seli-et-al-2016">
+       Pekrun, 1992; Seli et al., 2016
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#jack-and-schyns-2015">
+       Jack and Schyns, 2015
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#russell-et-al-2003">
+       Russell et al., 2003
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#dael-et-al-2012">
+       Dael et al., 2012
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#vytal-and-hamann-2010">
+       Vytal and Hamann, 2010
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#li-and-chen-2006">
+       Li and Chen, 2006
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="the-influences-of-emotion-on-learning-and-memory">
+<h1>The Influences of Emotion on Learning and Memory<a class="headerlink" href="#the-influences-of-emotion-on-learning-and-memory" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="paper-review">
+<h2>Paper Review<a class="headerlink" href="#paper-review" title="Permalink to this headline">¶</a></h2>
+<p><strong>Paper:</strong> <a class="reference external" href="https://doi.org/10.3389/fpsyg.2017.01454">Tyng, C. M. (2017)</a></p>
+<div class="section" id="what-questions-are-the-researchers-trying-to-answer">
+<h3>What questions are the researchers trying to answer?<a class="headerlink" href="#what-questions-are-the-researchers-trying-to-answer" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>The aim of this current article was to highlight an evolutionary approach to emotion, which may facilitate understanding of the effects of emotion on learning and memory.</p></li>
+</ul>
+</div>
+<div class="section" id="what-is-the-researcher-doing">
+<h3>What is the researcher doing?<a class="headerlink" href="#what-is-the-researcher-doing" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Presents the terminology used in affective neuroscience studies,</p></li>
+<li><p>describe the <strong>roles of emotion and motivation in learning and memory</strong></p></li>
+<li><p>outlines the evolutionary framework and the <strong>seven primary emotional system</strong>.</p></li>
+<li><p>outlines emotional-cognitive interactions in the various brain regions that are intimately involved in <strong>emotion and memory systems</strong></p>
+<ul>
+<li><p><strong>This is performed to define the congruent interactions in these regions are associated with long-term memory (LTM) retention.</strong></p></li>
+</ul>
+</li>
+<li><p>discuss the emerging studies that further our understanding of emotional effects deriving from different modalities of emotional content.</p></li>
+<li><p>discusses four major functional neuroimaging techniques, including</p>
+<ul>
+<li><p>functional magnetic resonance imaging (fMRI)</p></li>
+<li><p>positron emission tomography (PET)</p></li>
+<li><p>electroencephalography (EEG), and</p></li>
+<li><p>functional near-infrared spectroscopy (fNIRS)</p></li>
+</ul>
+</li>
+<li><p>presents the <strong>important factors for consideration in experimental design</strong></p></li>
+<li><p>describe psychiatric disorders, such as depression and anxiety, which are emotionally charged dysfunctions that are strongly detrimental to cognitive performance</p></li>
+<li><p>remarks on the current issues and future research possibilities with respect to the efficient enhancement of educational practices and technologies</p></li>
+</ul>
+</div>
+<div class="section" id="why-did-they-do-it-that-way">
+<h3>Why did they do it that way?<a class="headerlink" href="#why-did-they-do-it-that-way" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>this was a very interesting review paper on a subject that could be quite impactful, there is no experiments here though.</p></li>
+</ul>
+</div>
+<div class="section" id="what-are-other-ways-of-doing-it">
+<h3>What are other ways of doing it?<a class="headerlink" href="#what-are-other-ways-of-doing-it" title="Permalink to this headline">¶</a></h3>
+<p>According to Tyng several remaining questions should be addressed in future studies, including:</p>
+<ol class="simple">
+<li><p>the <strong>impact of emotion on semantic knowledge encoding and retrieval</strong></p></li>
+<li><p>psychological and physiological changes associated with semantic learning and memory,</p></li>
+<li><p>the development of methods that incorporate emotional and motivational aspects that improve educational praxes, outcomes, and instruments.</p></li>
+</ol>
+</div>
+<div class="section" id="how-is-it-useful-to-me">
+<h3>How is it useful to me?<a class="headerlink" href="#how-is-it-useful-to-me" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Emotion has a substantial influence on the cognitive processes in humans, including perception, attention, <strong>learning</strong>, <strong>memory</strong>, reasoning, and <strong>problem-solving</strong>.</p>
+<ul>
+<li><p>I would like to see the impact of incorporating emotional states on these cognitive processes</p></li>
+<li><p>Emotion has a particularly strong influence on attention,</p>
+<ul>
+<li><p>especially modulating the selectivity of attention</p></li>
+<li><p>as well as motivating action and behavior.</p></li>
+<li><p>This attentional and executive control is intimately linked to <strong>learning processes</strong>,</p>
+<ul>
+<li><p>as intrinsically limited attentional capacities are better focused on relevant information.</p></li>
+<li><p><strong>can we use emotional states to influence where a robot directs its attention?</strong></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Emotion also facilitates encoding and helps retrieval of information efficiently.</p>
+<ul>
+<li><p><strong>How can we incorporate this model into Nengo?</strong></p></li>
+</ul>
+</li>
+<li><p>the effects of emotion on learning and memory are not always univalent,</p>
+<ul>
+<li><p>studies have reported that emotion either enhances or impairs learning and long-term memory (LTM) retention, depending on a range of factors.</p>
+<ul>
+<li><p><strong>Can this be replicated in simulation?</strong></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Recent neuroimaging findings have indicated that the amygdala and prefrontal cortex cooperate with the medial temporal lobe in an integrated manner that affords</p>
+<ol class="simple">
+<li><p>the amygdala modulating memory consolidation;</p></li>
+<li><p>the prefrontal cortex mediating memory encoding and formation; and</p></li>
+<li><p>the hippocampus for successful learning and LTM retention.</p></li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>Emotional experiences/stimuli appear to be remembered vividly and accurately, with great resilience over time.</p></li>
+<li><p>Three different approaches are used to monitor the changes in emotional states:</p>
+<ol class="simple">
+<li><p>~~subjective approaches that assess subjective feelings and experiences;~~ <em>unfortunately I cannot know the subjective experience of a robot</em></p></li>
+<li><p>behavioral investigations of</p>
+<ol class="simple">
+<li><p>facial expressions (Jack and Schyns, 2015),</p></li>
+<li><p>vocal expressions (Russell et al., 2003), and</p></li>
+<li><p>gestural changes (Dael et al., 2012); and</p></li>
+</ol>
+</li>
+<li><p>objective approaches via physiological responses that include</p>
+<ol class="simple">
+<li><p>electrical and hemodynamic of the central nervous system (CNS) activities (Vytal and Hamann, 2010) - <em>could be incorporated into a spiking NN</em></p></li>
+<li><p>in addition to autonomic nervous system (ANS) responses such as</p>
+<ol class="simple">
+<li><p>heart rate,</p></li>
+<li><p>respiratory volume/rate,</p></li>
+<li><p>skin temperature,</p></li>
+<li><p>skin conductance and</p></li>
+<li><p>blood volume pulses (Li and Chen, 2006).</p></li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>it describes the roles of emotion and motivation in learning and memory,</p></li>
+<li><p>it outlines the <strong>seven primary emotional system</strong></p></li>
+<li><p>outlines emotional-cognitive interactions in the various brain regions that are intimately involved in emotion and memory systems</p>
+<ul>
+<li><p><strong>This is performed to define the congruent interactions in these regions are associated with long-term memory (LTM) retention.</strong></p></li>
+</ul>
+</li>
+<li><p>Substantial evidence has established that emotional events are remembered more clearly, accurately and for longer periods of time than are neutral events.</p>
+<ul>
+<li><p>If this can be replicated in simulation it would provide a lot of value to the pursuit of AGI</p></li>
+</ul>
+</li>
+<li><p>activation of the amygdala:</p>
+<ul>
+<li><p>enhances the processing of emotionally arousing stimuli</p></li>
+<li><p>modulates enhanced memory consolidation along with other memory-related brain regions, particularly the amygdala, hippocampus, MTL, as well as the visual, frontal and parietal cortices.</p></li>
+</ul>
+</li>
+<li><p>activation of the PFC</p>
+<ul>
+<li><p>enhances cognitive functions, such as strategic and semantic processing that affect WM and also promote the establishment of LTM.</p></li>
+</ul>
+</li>
+<li><p>Previous studies have primarily used standardized emotional visual, or auditory stimuli such as pictures, words, facial expression, and film clips, often based on the IAPS, ANEW, and POFA databases for emotional pictures, words and facial expressions, respectively.</p>
+<ul>
+<li><p><strong>What standardized data could we use in simulation?</strong></p></li>
+</ul>
+</li>
+<li><p>the SEEKING system generates positive subjective emotional states-positive expectancy, enthusiastic exploration, and hopefulness, apparently, initiates learning and memory in the brain. <strong>wow!</strong></p></li>
+<li><p><strong>All cognitive activity is motivated from ‘underneath’ by basic emotional and homeostatic needs (motivational drives) that explore environmental events for survival while facilitating secondary processes of learning and memory.</strong></p></li>
+</ul>
+<div class="section" id="many-opportunities-for-study">
+<h4>Many opportunities for study:<a class="headerlink" href="#many-opportunities-for-study" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>To their knowledge, there are few objective studies that employed brain-mapping techniques to examine semantic memory of learning materials (using subject matter) in the education context.</p></li>
+<li><p>influences derived from emotional factors in human learning and memory remains unclear as to whether positive emotions facilitate learning or negative emotions impair learning and vice versa.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="background-literature-review">
+<h3>Background Literature Review<a class="headerlink" href="#background-literature-review" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="vuilleumier-2005">
+<h4><a class="reference external" href="https://www.cell.com/trends/cognitive-sciences/fulltext/S1364-6613(05)00302-5?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS1364661305003025%3Fshowall%3Dtrue">Vuilleumier, 2005</a><a class="headerlink" href="#vuilleumier-2005" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>reported that the cognitive process attention is affected by emotions in humans</p></li>
+</ul>
+</div>
+<div class="section" id="phelps-2004-um-et-al-2012">
+<h4><a class="reference external" href="https://www.sciencedirect.com/science/article/abs/pii/S0959438804000479?via%3Dihub">Phelps, 2004</a>; <a class="reference external" href="https://doi.apa.org/doiLanding?doi=10.1037%2Fa0026609">Um et al., 2012</a><a class="headerlink" href="#phelps-2004-um-et-al-2012" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>reported that the cognitive process learning and memory is affected by emotions in humans</p></li>
+</ul>
+</div>
+<div class="section" id="jung-et-al-2014">
+<h4><a class="reference external" href="https://www.frontiersin.org/articles/10.3389/fpsyg.2014.00570/full">Jung et al., 2014</a><a class="headerlink" href="#jung-et-al-2014" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>reported that the cognitive process reasoning is affected by emotions in humans</p></li>
+</ul>
+</div>
+<div class="section" id="isen-et-al-1987">
+<h4><a class="reference external" href="https://doi.apa.org/doiLanding?doi=10.1037%2F0022-3514.52.6.1122">Isen et al., 1987</a><a class="headerlink" href="#isen-et-al-1987" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>reported that the cognitive process problem-solving is affected by emotions in humans</p></li>
+</ul>
+</div>
+<div class="section" id="pekrun-1992-seli-et-al-2016">
+<h4><a class="reference external" href="https://iaap-journals.onlinelibrary.wiley.com/doi/10.1111/j.1464-0597.1992.tb00712.x">Pekrun, 1992</a>; <a class="reference external" href="https://www.jneurosci.org/content/23/34/10809.short">Seli et al., 2016</a><a class="headerlink" href="#pekrun-1992-seli-et-al-2016" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>linked attentional and motivational components of emotion to heightened learning and memory.</p>
+<ul>
+<li><p>Hence, emotional experiences/stimuli appear to be remembered vividly and accurately, with great resilience over time.</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="jack-and-schyns-2015">
+<h4><a class="reference external" href="https://www.cell.com/current-biology/fulltext/S0960-9822(15)00655-7?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS0960982215006557%3Fshowall%3Dtrue">Jack and Schyns, 2015</a><a class="headerlink" href="#jack-and-schyns-2015" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>monitor the changes in emotional states using behavioral investigations of facial expressions</p></li>
+</ul>
+</div>
+<div class="section" id="russell-et-al-2003">
+<h4><a class="reference external" href="https://www.annualreviews.org/doi/10.1146/annurev.psych.54.101601.145102">Russell et al., 2003</a><a class="headerlink" href="#russell-et-al-2003" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>monitor the changes in emotional states using behavioral investigations of vocal expressions</p></li>
+</ul>
+</div>
+<div class="section" id="dael-et-al-2012">
+<h4><a class="reference external" href="https://doi.apa.org/doiLanding?doi=10.1037%2Fa0025737">Dael et al., 2012</a><a class="headerlink" href="#dael-et-al-2012" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>monitor the changes in emotional states using behavioral investigations of gestural changes</p></li>
+</ul>
+</div>
+<div class="section" id="vytal-and-hamann-2010">
+<h4><a class="reference external" href="https://direct.mit.edu/jocn/article/22/12/2864/5011/Neuroimaging-Support-for-Discrete-Neural">Vytal and Hamann, 2010</a><a class="headerlink" href="#vytal-and-hamann-2010" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>monitor the changes in emotional states using physiological responses that include electrical and hemodynamic of the central nervous system (CNS) activities</p></li>
+</ul>
+</div>
+<div class="section" id="li-and-chen-2006">
+<h4><a class="reference external" href="https://link.springer.com/chapter/10.1007%2F11941354_44">Li and Chen, 2006</a><a class="headerlink" href="#li-and-chen-2006" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>monitor the changes in emotional states using physiological responses that include the autonomic nervous system (ANS) with responses such as:</p>
+<ol class="simple">
+<li><p>heart rate</p></li>
+<li><p>respiratory volume/rate</p></li>
+<li><p>skin temperature</p></li>
+<li><p>skin conductance and</p></li>
+<li><p>blood volume pulses</p></li>
+</ol>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./paper_summaries"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="simple_foraging_robots_with_emotional_overlay.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Effect of Reward Prediction Errors on the Emotional State of a Mobile Robot</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="../chapter_introductions/Exploration_Curiosity.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">Exploration and Curiosity</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By Christopher Risi<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

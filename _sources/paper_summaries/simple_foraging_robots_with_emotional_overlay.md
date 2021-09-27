@@ -191,14 +191,16 @@ exponential decay meant that the value of any previous events was negligibly sma
         - choleric, and 
         - sanguine 
 - Another approach would be the specification of the temperament--often described in the literature (Digman, 1990)--in terms of the “Big 5” traits of: 
-        - extraversion, 
-        - agreeableness, 
-        - openness, 
-        - conscientiousness, and 
-        - neuroticism
+  - extraversion, 
+  - agreeableness, 
+  - openness, 
+  - conscientiousness, and 
+  - neuroticism
 - incorporating the acquisition of a non-homogeneous robot swarm with varying temperaments to explore if emotions increase the effectiveness of the swarm
 - the decay component $\gamma$ could be modified using Nengo's short-memory module because this model only used a **memory length of six events** 
 - incorporate long-term memory and learning if the model can successfully be implemented in Nengo
+- mixed emotions instead of strongest
+
 
 ### How is it useful to me?
 This paper defines a robot model that could be implemented with Nengo.
