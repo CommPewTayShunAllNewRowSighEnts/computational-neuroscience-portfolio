@@ -78,7 +78,7 @@ According to Tyng several remaining questions should be addressed in future stud
       - as intrinsically limited attentional capacities are better focused on relevant information.
       - **can we use emotional states to influence where a robot directs its attention?**
   - Emotion also facilitates encoding and helps retrieval of information efficiently.
-    - **How can we incorporate this into a Nengo model?**
+    - **How can we model this with Nengo?**
   - the effects of emotion on learning and memory are not always univalent, 
     - studies have reported that emotion either enhances or impairs learning and long-term memory (LTM) retention, depending on a range of factors.
       - **Can this be replicated in simulation?**

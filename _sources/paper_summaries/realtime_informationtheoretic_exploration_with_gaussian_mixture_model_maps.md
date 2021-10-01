@@ -16,6 +16,6 @@
 
 ### How is it useful to me?
 - The motion planner that is designed to select smooth and continuous trajectories that maximize an information-theoretic objective function.
-
+- I don't have a background in information theory yet, so this might be too challenging for me in the near future. 
 
 ### Background Literature Review
