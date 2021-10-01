@@ -8,11 +8,47 @@
 - The aim of this current article was to highlight an evolutionary approach to emotion, which may facilitate understanding of the effects of emotion on learning and memory. 
 
 ### What is the researcher doing?
-- Presents the terminology used in affective neuroscience studies, 
-- describe the **roles of emotion and motivation in learning and memory** 
-- outlines the evolutionary framework and the **seven primary emotional system**. 
-- outlines emotional-cognitive interactions in the various brain regions that are intimately involved in **emotion and memory systems**
-  - **This is performed to define the congruent interactions in these regions are associated with long-term memory (LTM) retention.**
+#### Presents the terminology used in affective neuroscience studies
+Emotions describe a complex set of interactions between subjective and objective variables that are mediated by neural and hormonal systems, which can:
+1. give rise to affective experiences of emotional valence (pleasure-displeasure) and emotional arousal (high-low activation/calming-arousing);
+2. generate cognitive processes such as emotionally relevant perceptual affect, appraisals, labeling processes; 
+3. activate widespread psychological and physiological changes to the arousing conditions; and 
+4. motivate behavior that is often but not always expressive, goal-directed and adaptive.
+
+#### Describes the **roles of emotion and motivation in learning and memory** and outlines the evolutionary framework and the **seven primary emotional system** 
+According to Panksepp (1998) the above definition does not encompass some important aspects of emotional systems such as how emotions operate to create subjectively experienced feelings and how they control personality dimensions. 
+  - each emotion has a characteristic “feeling tone” that is especially important in encoding the intrinsic values of these interactions, depending on their likelihood of either promoting or hindering survival (both in the immediate “personal” and long-term “reproductive” sense). 
+  - Subjective experiential-feelings arise from the interactions of various emotional systems with the fundamental brain substrates of “the self,” that is important in **encoding new information** as well as **retrieving information** on subsequent events and **allowing individuals efficiently to generalize new events and make decisions**.
+He went further to propose seven primary emotional systems/prototype emotional states, namely: 
+  - SEEKING 
+  - RAGE
+  - FEAR 
+  - LUST 
+  - CARE
+  - PANIC/GRIEF and 
+  - PLAY 
+that represent basic foundations for living and learning.
+
+It is well established that emotions influence memory retention and recall, in terms of learning, the question of emotional impacts remains questionable. 
+ 
+Confounding influences of emotions on learning and memory can be explained in terms of attentional and motivational components. 
+- Attentional components enhance perceptual processing, which then helps to select and organize salient information via a “bottom-up” approach to higher brain functions and awareness.[Vuilleumier2005] 
+- Motivational components induce curiosity, which is a state associated with psychological interest in novel and/or surprising activities (stimuli). 
+    - A curiosity state encourages further exploration and apparently prepares the brain to learn and remember in both children and adults.[Oudeyer2016] 
+    - The term “surprising” might be conceptualized as an incongruous situation (expectancy violation) refers to a **discrepancy between prior expectations and the new information**; it may drive a **cognitive reset for “learned content” that draws one’s attention**.
+
+**Emotionally enhanced memory functions** have been reported in relation to **selective attention** elicited by **emotionally salient stimuli** [Vuilleumier2005];[Schupp2007]
+During the initial perceptual stage, attention is biased toward emotionally salient information that supports detection by the salient input. Thus, stimulating selective attention increases the likelihood for emotional information to become encoded in LTM storage associated with a top-down control in sensory pathways that are modulated by the frontal and parietal cortices. 
+This is an example of an indirect influence on perception and attention that regulates selective sensory processing and behavioral determination.
+
+
+#### Outlines emotional-cognitive interactions in the various brain regions that are intimately involved in **emotion and memory systems**
+Because the human sensory systems have no capacity to simultaneously process everything at once, which necessitates attentional mechanisms. 
+- Top-down attentional processing obtains adequate attentional resource allocation to process emotional valence information for encoding and retrieval via cooperation with the brain regions such as the
+  - ventromedial prefrontal cortex and superior temporal sulcus, 
+  - along with the primary visual cortex (helps to realize both emotion and conceptualization).
+ 
+- **This is performed to define the congruent interactions in these regions are associated with long-term memory (LTM) retention.**
 - discuss the emerging studies that further our understanding of emotional effects deriving from different modalities of emotional content.
 - discusses four major functional neuroimaging techniques, including 
   - functional magnetic resonance imaging (fMRI) 
@@ -24,7 +60,7 @@
 - remarks on the current issues and future research possibilities with respect to the efficient enhancement of educational practices and technologies
 
 ### Why did they do it that way?
-- this was a very interesting review paper on a subject that could be quite impactful, there is no experiments here though.
+- this was a very interesting review paper on a subject that could be quite impactful, there are no experiments here though.
 
 ### What are other ways of doing it?
 According to Tyng several remaining questions should be addressed in future studies, including:
@@ -42,7 +78,7 @@ According to Tyng several remaining questions should be addressed in future stud
       - as intrinsically limited attentional capacities are better focused on relevant information.
       - **can we use emotional states to influence where a robot directs its attention?**
   - Emotion also facilitates encoding and helps retrieval of information efficiently.
-    - **How can we incorporate this model into Nengo?**
+    - **How can we model this with Nengo?**
   - the effects of emotion on learning and memory are not always univalent, 
     - studies have reported that emotion either enhances or impairs learning and long-term memory (LTM) retention, depending on a range of factors.
       - **Can this be replicated in simulation?**
@@ -86,9 +122,21 @@ According to Tyng several remaining questions should be addressed in future stud
 - influences derived from emotional factors in human learning and memory remains unclear as to whether positive emotions facilitate learning or negative emotions impair learning and vice versa.
 
 
+
 ### Background Literature Review
+
+#### [Panksepp (1998)](https://www.sciencedirect.com/science/article/abs/pii/S1053810004001187?via%3Dihub) [Kleinginna and Kleinginna, 1981](https://link.springer.com/article/10.1007%2FBF00992553)
+- attempted to provide a single definition of emotions
+- He went further to propose seven primary emotional systems/prototype emotional states. 
+
+#### [Oudeyer et al., 2016](https://www.sciencedirect.com/science/article/abs/pii/S0079612316300589?via%3Dihub) 
+[^Oudeyer2016]:
+- reported that curiosity state encourages further exploration and apparently prepares the brain to learn and remember in both children and adults
+
 #### [Vuilleumier, 2005](https://www.cell.com/trends/cognitive-sciences/fulltext/S1364-6613(05)00302-5?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS1364661305003025%3Fshowall%3Dtrue)
+[^Vuilleumier2005]:  
 - reported that the cognitive process attention is affected by emotions in humans
+- Attentional components enhance perceptual processing, which then helps to select and organize salient information via a “bottom-up” approach to higher brain functions and awareness
 
 #### [Phelps, 2004](https://www.sciencedirect.com/science/article/abs/pii/S0959438804000479?via%3Dihub); [Um et al., 2012](https://doi.apa.org/doiLanding?doi=10.1037%2Fa0026609)
 - reported that the cognitive process learning and memory is affected by emotions in humans
