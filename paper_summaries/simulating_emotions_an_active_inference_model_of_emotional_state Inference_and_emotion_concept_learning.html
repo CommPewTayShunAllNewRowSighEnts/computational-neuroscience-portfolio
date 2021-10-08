@@ -1,0 +1,795 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simulating Emotions an Active Inference Model of Emotional State Inference and Emotion Concept Learning &#8212; Computational Neuroscience Research</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e2363ea40746bee74734a24ffefccd78.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Exploration and Curiosity" href="../chapter_introductions/Exploration_Curiosity.html" />
+    <link rel="prev" title="The Influences of Emotion on Learning and Memory" href="influences_of_emotion_on_learning_and_memory.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Computational Neuroscience Research</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Welcome to my Computational Neuroscience Research Portfolio
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Projects
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_introductions/Research_Projects.html">
+   Research Projects
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_introductions/Course_Projects.html">
+   Course Projects
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Paper Summaries
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../chapter_introductions/Emotions.html">
+   Emotions
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="simple_foraging_robots_with_emotional_overlay.html">
+     Effect of Reward Prediction Errors on the Emotional State of a Mobile Robot
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="influences_of_emotion_on_learning_and_memory.html">
+     The Influences of Emotion on Learning and Memory
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Simulating Emotions an Active Inference Model of Emotional State Inference and Emotion Concept Learning
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../chapter_introductions/Exploration_Curiosity.html">
+   Exploration and Curiosity
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="fractional_binding_in_vector_symbolic_representations.html">
+     Fractional Binding in Vector Symbolic Representations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ergodic_exploration_of_distributed_information.html">
+     Ergodic Exploration of Distributed Information
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="realtime_informationtheoretic_exploration_with_gaussian_mixture_model_maps.html">
+     Real-time Information-Theoretic Exploration with Gaussian Mixture Model Maps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../chapter_introductions/Probabilistic_Modelling.html">
+   Probabilistic Modelling
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="a_spiking_neural_bayesian_model_of_life_span_inference.html">
+     A Spiking Neural Bayesian Model of Life Span Inference
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../chapter_introductions/Context_Dependent_Decision_Making.html">
+   Context Dependent Decision Making
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="a_neural_model_of_context_dependent_decision_making_in_the_pfc.html">
+     A Neural Model of Context Dependent Decision Making in the Prefrontal Cortex
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../chapter_introductions/Memory.html">
+   Memory
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="generalizable_knowledge_outweighs_incidential_details.html">
+     Generalizable knowledge outweighs incidental details in prefrontal ensemble code over time
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/paper_summaries/simulating_emotions_an_active_inference_model_of_emotional_state Inference_and_emotion_concept_learning.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/CommPewTayShunAllNewRowSighEnts/computational-neuroscience-portfolio"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/CommPewTayShunAllNewRowSighEnts/computational-neuroscience-portfolio/issues/new?title=Issue%20on%20page%20%2Fpaper_summaries/simulating_emotions_an_active_inference_model_of_emotional_state Inference_and_emotion_concept_learning.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#paper-review">
+   Paper Review
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-is-the-researcher-doing">
+     What is the researcher doing?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#why-did-they-do-it-that-way">
+     Why did they do it that way?
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#active-inference">
+       Active Inference
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#computation">
+       Computation
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-are-other-ways-of-doing-it-or-how-can-this-work-be-extended">
+     What are other ways of doing it? Or, how can this work be extended?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#how-is-it-useful-to-me">
+     How is it useful to me?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#literature-review">
+     Literature Review
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#bagby-et-al-1994a-b">
+       Bagby et al., 1994a,b
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#barchard-and-hakstian-2004">
+       Barchard and Hakstian, 2004
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#barrett-2017">
+       Barrett, 2017;
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#brejard-et-al-2012">
+       Bréjard et al., 2012
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#ciarrochi-et-al-2003">
+       Ciarrochi et al., 2003
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#friston-et-al-2017a">
+       Friston et al., 2017a
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#hohwy-2016">
+       Hohwy, 2016
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#joffily-and-coricelli-2013-seth-2013-barrett-and-simmons-2015-seth-and-friston-2016-smith-et-al-2017d-2019e-clark-et-al-2018">
+       (Joffily and Coricelli, 2013; Seth, 2013; Barrett and Simmons, 2015; Seth and Friston, 2016; Smith et al., 2017d, 2019e; Clark et al., 2018)
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#kashdan-and-farmer-2014-kashdan-et-al-2015">
+       Kashdan and Farmer, 2014; Kashdan et al., 2015
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#kleckner-et-al-2017">
+       Kleckner et al., 2017;
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#lane-et-al-1990-1996-2000">
+       Lane et al., 1990, 1996, 2000
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#lane-et-al-2015">
+       Lane et al., 2015;
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#lane-and-schwartz-1987">
+       Lane and Schwartz, 1987
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#mcrae-et-al-2008">
+       McRae et al., 2008
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#panksepp-et-al-2017">
+       Panksepp et al., 2017;
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#panksepp-and-biven-2012">
+       Panksepp and Biven, 2012
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#smith-et-al-2015-2017b-c-2018a-b-c-d-e-2019a-c">
+       Smith et al.,  2015, 2017b,c, 2018a,b,c,d,e, 2019a,c
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#smith-and-lane-2015-2016">
+       Smith and Lane, 2015, 2016
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#wilson-mendenhall-et-al-2011">
+       Wilson-Mendenhall et al., 2011;
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#wright-et-al-2017">
+       Wright et al., 2017.
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="simulating-emotions-an-active-inference-model-of-emotional-state-inference-and-emotion-concept-learning">
+<span id="paper-summaries-emotions-simulating-emotions-an-active-inference-model-of-emotional-state-inference"></span><h1>Simulating Emotions an Active Inference Model of Emotional State Inference and Emotion Concept Learning<a class="headerlink" href="#simulating-emotions-an-active-inference-model-of-emotional-state-inference-and-emotion-concept-learning" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="paper-review">
+<h2>Paper Review<a class="headerlink" href="#paper-review" title="Permalink to this headline">¶</a></h2>
+<p><strong>Paper:</strong> <a class="reference external" href="https://doi.org/10.3389/fpsyg.2019.02844">Smith, R. (2019)</a></p>
+<ul class="simple">
+<li><p>The ability to conceptualize and understand one’s own affective states and responses—or “Emotional awareness” (EA)—is positively correlated with a range of adaptive cognitive and emotional traits.</p></li>
+<li><p>a growing body of work has investigated the neurocognitive basis of EA, the neurocomputational processes underlying this ability have received limited attention.</p></li>
+<li><p>they present a formal Active Inference (AI) model of emotion conceptualization that can simulate the neurocomputational (Bayesian) processes associated with learning about emotion concepts and inferring the emotions one is feeling in a given moment.</p></li>
+<li><p>they validate the model and inherent constructs by showing</p>
+<ol class="simple">
+<li><p>it can successfully acquire a repertoire of emotion concepts in its “childhood”, as well as</p></li>
+<li><p>acquire new emotion concepts in synthetic “adulthood,” and</p></li>
+<li><p>that these learning processes depend on early experiences, environmental stability, and habitual patterns of selective attention.</p></li>
+</ol>
+</li>
+</ul>
+<div class="section" id="what-is-the-researcher-doing">
+<h3>What is the researcher doing?<a class="headerlink" href="#what-is-the-researcher-doing" title="Permalink to this headline">¶</a></h3>
+<p>The researchers proposed a neurocognitive model – termed the “three-process model” of emotion episodes – with a primary focus on accounting for individual differences in emotional awareness:</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition-somatovisceral admonition">
+<p class="admonition-title">somatovisceral</p>
+<p>Pertaining to the influence of the body framework (soma), or neuromusculoskeletal system, on the function of the internal body systems and organs.</p>
+</div>
+</div>
+<ol class="simple">
+<li><p><strong>Affective response generation:</strong> a process in which somatovisceral and cognitive states are <strong>automatically modulated in response to an affective stimulus</strong> (whether real, remembered, or imagined) in a context-dependent manner, <strong>based on an (often implicit) appraisal of the significance of that stimulus for the survival and goal-achievement</strong> of the individual (i.e., <strong>predictions</strong> about the cognitive, metabolic, and behavioral demands of the situation).</p></li>
+<li><p><strong>Affective response representation:</strong> a process in which the somatovisceral component of <strong>an affective response is subsequently perceived via afferent sensory processing</strong>, and then <strong>conceptualized as a particular emotion</strong> (e.g., sadness, anger, etc.) in consideration of all other available sources of information (e.g., stimulus/context information, current thoughts/beliefs about the situation, etc.).</p></li>
+<li><p><strong>Conscious access:</strong> a process in which the representations of somatovisceral percepts and <strong>emotion concept representations may or may not enter and be held in working memory – constraining the use of this information in goal-directed decision-making</strong> (e.g., verbal reporting, selection of voluntary emotion regulation strategies, etc.).</p></li>
+</ol>
+<p>The TPM has also proposed a tentative mapping to the brain in terms of interactions between large-scale neural networks serving domain-general cognitive functions.
+Some support for this proposal has been found within recent neuroimaging studies.
+However, the neurocomputational implementation of these processes has not been thoroughly considered.
+The computational level of description offers the promise of providing more specific and mechanistic insights</p>
+<ul class="simple">
+<li><p>They aim to take the first steps in constructing an explicit computational model of the acquisition and deployment of emotion concept knowledge (i.e., affective response representation) as described within the TPM</p>
+<ul>
+<li><p>(subsequent work will focus on affective response generation and conscious access processes; see Smith et al., 2019b).</p></li>
+</ul>
+</li>
+<li><p>Specifically, they present a simple Active Inference model (Friston et al., 2016, 2017a) of emotion conceptualization, formulated as a <strong>Markov Decision Process</strong>.</p></li>
+<li><p>They then outline some initial insights afforded by simulations using this model.</p></li>
+<li><p>The place a special emphasis on <strong>deep generative models</strong> that afford the capacity to explain multimodal (i.e., interoceptive, proprioceptive, and exteroceptive) sensations that are characteristic of emotional experience.</p></li>
+<li><p>They introduce a particular model of emotion inference that is sufficiently nuanced to produce <strong>synthetic emotional processes</strong> but sufficiently simple to be understood from a “first principles” account.</p></li>
+<li><p>They establish the validity of this model using <strong>numerical analyses of emotion concept learning</strong> during (synthetic) neurodevelopment.</p></li>
+<li><p>They conclude with a brief discussion of the implications of this work; particularly for <strong>future applications</strong>.</p></li>
+</ul>
+</div>
+<div class="section" id="why-did-they-do-it-that-way">
+<h3>Why did they do it that way?<a class="headerlink" href="#why-did-they-do-it-that-way" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="active-inference">
+<h4>Active Inference<a class="headerlink" href="#active-inference" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Active Inference (AI) starts from the assumption that <strong>the brain is an inference machine that approximates optimal probabilistic (Bayesian) belief updating across all biopsychological domains</strong> (e.g., perception, decision-making, motor control, etc.)</p></li>
+<li><p>AI postulates that <strong>the brain embodies an internal model of the world</strong> (including the body) that is “generative” in the sense that it is able to simulate the sensory data that it should receive if its model of the world is correct.</p></li>
+<li><p>This simulated (predicted) sensory data can be compared to actual observations, and <strong>deviations between predicted and observed sensations can then be used to update the model</strong>.</p></li>
+<li><p>On short timescales (e.g., a single trial in a perceptual decision-making task) this updating corresponds to perception, whereas on longer timescales it corresponds to learning (i.e., updating expectations about what will be observed on subsequent trials).</p></li>
+<li><p>Action (be it skeletomotor, visceromotor, or cognitive action) can be cast in similar terms.</p>
+<ul>
+<li><p>For example, <strong>actions can be chosen to resolve uncertainty about variables within a generative model</strong> (i.e., sampling from domains in which the model does not make precise predictions).</p></li>
+<li><p>This can <strong>prevent future deviations from predicted outcomes</strong>.</p></li>
+<li><p>there is a deep sense in which the brain must continually seek out observations that support – or are internally consistent with – its own continued existence.</p>
+<ul>
+<li><p>decision-making can be cast as a process in which the brain infers the sets of actions (policies) that would lead to observations most consistent with its own survival-related expectations (i.e., its “prior preferences”).</p></li>
+<li><p>Mathematically, this can be described as selecting policies that maximize a quantity called “Bayesian model evidence”</p>
+<ul>
+<li><p>that is, the probability that sensory data would be observed under a given model.</p></li>
+<li><p>In other words, because the brain is itself a model of the world, action can be understood as a process by which the brain seeks out evidence for itself – sometimes known as self-evidencing (Hohwy, 2016).</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="computation">
+<h4>Computation<a class="headerlink" href="#computation" title="Permalink to this headline">¶</a></h4>
+<p>In a real-world setting, directly computing model evidence becomes mathematically intractable.</p>
+<ul class="simple">
+<li><p>Thus, the brain must use some approximation:</p></li>
+<li><p>AI proposes that the brain instead computes a statistical quantity called <strong>free energy</strong>.</p>
+<ul>
+<li><p>Unlike model evidence, computing free energy is mathematically tractable.</p></li>
+<li><p>This quantity provides a bound on model evidence, such that <strong>minimization of free energy is equivalent to maximizing model evidence</strong>.</p></li>
+<li><p>in decision-making an agent can evaluate the <strong>expected free energy</strong> of the alternative policies it could select—that is, the free energy of future trajectories under each policy (i.e., based on predicted future outcomes, given the future states that would be expected under each policy).</p></li>
+<li><p>Therefore, <strong>decision-making will be approximately (Bayes) optimal</strong> if it operates by inferring (and enacting) the policy that minimizes expected free energy – and thereby maximizes evidence for the brain’s internal model.</p></li>
+<li><p><strong>expected free energy</strong> can be decomposed into terms reflecting <strong>uncertainty</strong> and <strong>prior preferences</strong>, respectively.</p>
+<ul>
+<li><p>This decomposition explains why agents that minimize expected free energy will first select exploratory policies that minimize uncertainty in a new environment (often called the “epistemic value” component of expected free energy).</p></li>
+<li><p>Once uncertainty is resolved, the agent then selects policies that exploit that environment to maximize her prior preferences (often called the “pragmatic value” component of expected free energy).</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="figure align-default" id="id1">
+<img alt="../_images/Active_Inference_Model.jpg" src="../_images/Active_Inference_Model.jpg" />
+<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">This is from <a class="reference external" href="https://www.frontiersin.org/files/Articles/489395/fpsyg-10-02844-HTML/image_m/fpsyg-10-02844-g002.jpg">Figure 2</a> of the article</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+<div class="section" id="what-are-other-ways-of-doing-it-or-how-can-this-work-be-extended">
+<h3>What are other ways of doing it? Or, how can this work be extended?<a class="headerlink" href="#what-are-other-ways-of-doing-it-or-how-can-this-work-be-extended" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="how-is-it-useful-to-me">
+<h3>How is it useful to me?<a class="headerlink" href="#how-is-it-useful-to-me" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>offers a proof of principle that cognitive-emotional processes can be modeled formally, and highlight the potential for both theoretical and empirical extensions of this line of research on emotion and emotional disorders.</p></li>
+<li><p>The neurocomputational implementation of the TPM has not been thoroughly considered so this is a research opportunity to model this with Nengo</p></li>
+<li><p>no formal modeling of emotion concept learning has yet been performed.</p></li>
+</ul>
+</div>
+<div class="section" id="literature-review">
+<h3>Literature Review<a class="headerlink" href="#literature-review" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="bagby-et-al-1994a-b">
+<h4>Bagby et al., 1994a,b<a class="headerlink" href="#bagby-et-al-1994a-b" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Attempts to operationalize cognitive-emotional ability have led to a range of overlapping constructs, alexithymia</p></li>
+</ul>
+</div>
+<div class="section" id="barchard-and-hakstian-2004">
+<h4>Barchard and Hakstian, 2004<a class="headerlink" href="#barchard-and-hakstian-2004" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>the construct of emotional awareness, higher ability levels of conceptualization have been associated with a range of adaptive emotion-related traits and abilities.</p></li>
+</ul>
+</div>
+<div class="section" id="barrett-2017">
+<h4>Barrett, 2017;<a class="headerlink" href="#barrett-2017" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>theoretical models of the underlying cognitive and neural basis for the ability to conceptualize and understand one’s affective responses</p></li>
+<li><p>Constructivist views hold that emotion categories do not have a 1-to-1 relationship to distinct neural circuitry, and that emotion concept acquisition is necessary for emotional experience</p></li>
+</ul>
+</div>
+<div class="section" id="brejard-et-al-2012">
+<h4>Bréjard et al., 2012<a class="headerlink" href="#brejard-et-al-2012" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>the construct of emotional awareness, higher ability levels of conceptualization have been associated with a range of adaptive emotion-related traits and abilities.</p></li>
+</ul>
+</div>
+<div class="section" id="ciarrochi-et-al-2003">
+<h4>Ciarrochi et al., 2003<a class="headerlink" href="#ciarrochi-et-al-2003" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>the construct of emotional awareness, higher ability levels of conceptualization have been associated with a range of adaptive emotion-related traits and abilities.</p></li>
+</ul>
+</div>
+<div class="section" id="friston-et-al-2017a">
+<h4>Friston et al., 2017a<a class="headerlink" href="#friston-et-al-2017a" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>detailing the formal mathematical basis for Active Inference</p></li>
+</ul>
+</div>
+<div class="section" id="hohwy-2016">
+<h4>Hohwy, 2016<a class="headerlink" href="#hohwy-2016" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>the brain is itself a model of the world, action can be understood as a process by which the brain seeks out evidence for itself – sometimes known as self-evidencing.</p></li>
+</ul>
+</div>
+<div class="section" id="joffily-and-coricelli-2013-seth-2013-barrett-and-simmons-2015-seth-and-friston-2016-smith-et-al-2017d-2019e-clark-et-al-2018">
+<h4>(Joffily and Coricelli, 2013; Seth, 2013; Barrett and Simmons, 2015; Seth and Friston, 2016; Smith et al., 2017d, 2019e; Clark et al., 2018)<a class="headerlink" href="#joffily-and-coricelli-2013-seth-2013-barrett-and-simmons-2015-seth-and-friston-2016-smith-et-al-2017d-2019e-clark-et-al-2018" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>previous theoretical work has applied active inference concepts to emotional phenomena</p></li>
+</ul>
+</div>
+<div class="section" id="kashdan-and-farmer-2014-kashdan-et-al-2015">
+<h4>Kashdan and Farmer, 2014; Kashdan et al., 2015<a class="headerlink" href="#kashdan-and-farmer-2014-kashdan-et-al-2015" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Attempts to operationalize cognitive-emotional ability have led to a range of overlapping constructs, emotion differentiation or granularity</p></li>
+</ul>
+</div>
+<div class="section" id="kleckner-et-al-2017">
+<h4>Kleckner et al., 2017;<a class="headerlink" href="#kleckner-et-al-2017" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>theoretical models of the underlying cognitive and neural basis for the ability to conceptualize and understand one’s affective responses</p></li>
+</ul>
+</div>
+<div class="section" id="lane-et-al-1990-1996-2000">
+<h4>Lane et al., 1990, 1996, 2000<a class="headerlink" href="#lane-et-al-1990-1996-2000" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>the construct of emotional awareness, higher ability levels of conceptualization have been associated with a range of adaptive emotion-related traits and abilities.</p></li>
+</ul>
+</div>
+<div class="section" id="lane-et-al-2015">
+<h4>Lane et al., 2015;<a class="headerlink" href="#lane-et-al-2015" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>theoretical models of the underlying cognitive and neural basis for the ability to conceptualize and understand one’s affective responses</p></li>
+</ul>
+</div>
+<div class="section" id="lane-and-schwartz-1987">
+<h4>Lane and Schwartz, 1987<a class="headerlink" href="#lane-and-schwartz-1987" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Attempts to operationalize cognitive-emotional ability have led to a range of overlapping constructs, including trait emotional awareness</p></li>
+</ul>
+</div>
+<div class="section" id="mcrae-et-al-2008">
+<h4>McRae et al., 2008<a class="headerlink" href="#mcrae-et-al-2008" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>The ability to conceptualize and understand one’s affective responses</p></li>
+</ul>
+</div>
+<div class="section" id="panksepp-et-al-2017">
+<h4>Panksepp et al., 2017;<a class="headerlink" href="#panksepp-et-al-2017" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>theoretical models of the underlying cognitive and neural basis for the ability to conceptualize and understand one’s affective responses</p></li>
+</ul>
+</div>
+<div class="section" id="panksepp-and-biven-2012">
+<h4>Panksepp and Biven, 2012<a class="headerlink" href="#panksepp-and-biven-2012" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>there are a number of competing views on the nature of emotions, most (if not all) accept that emotion concepts must be acquired through experience.</p>
+<ul>
+<li><p>For example, “basic emotions” theories hold that emotion categories like sadness and fear each have distinct neural circuitry, but do not deny that knowledge about these emotions must be learned</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="smith-et-al-2015-2017b-c-2018a-b-c-d-e-2019a-c">
+<h4>Smith et al.,  2015, 2017b,c, 2018a,b,c,d,e, 2019a,c<a class="headerlink" href="#smith-et-al-2015-2017b-c-2018a-b-c-d-e-2019a-c" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>The ability to conceptualize and understand one’s affective responses</p></li>
+<li><p>theoretical models of the underlying cognitive and neural basis for the ability to conceptualize and understand one’s affective responses</p></li>
+<li><p>Recently proposed a neurocognitive model – termed the “three-process model” of emotion episodes – with a primary focus on accounting for individual differences in emotional awareness.</p></li>
+<li><p>This model characterizes a range of emotion-related processes that could contribute to trait differences in both the learning and deployment of emotion concepts in order to understand one’s own affective responses (and in the subsequent use of these concepts to guide adaptive decision-making).</p></li>
+<li><p>The TPM distinguishes the following three broadly defined processes</p></li>
+<li><p>The TPM has also proposed a tentative mapping to the brain in terms of interactions between large-scale neural networks serving domain-general cognitive functions.</p>
+<ul>
+<li><p>Showed some support for this proposal has been found within recent neuroimaging studies</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="smith-and-lane-2015-2016">
+<h4>Smith and Lane, 2015, 2016<a class="headerlink" href="#smith-and-lane-2015-2016" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>theoretical models of the underlying cognitive and neural basis for the ability to conceptualize and understand one’s affective responses</p></li>
+</ul>
+</div>
+<div class="section" id="wilson-mendenhall-et-al-2011">
+<h4>Wilson-Mendenhall et al., 2011;<a class="headerlink" href="#wilson-mendenhall-et-al-2011" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>theoretical models of the underlying cognitive and neural basis for the ability to conceptualize and understand one’s affective responses</p></li>
+</ul>
+</div>
+<div class="section" id="wright-et-al-2017">
+<h4>Wright et al., 2017.<a class="headerlink" href="#wright-et-al-2017" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>The ability to conceptualize and understand one’s affective responses</p></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./paper_summaries"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="influences_of_emotion_on_learning_and_memory.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">The Influences of Emotion on Learning and Memory</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="../chapter_introductions/Exploration_Curiosity.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">Exploration and Curiosity</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By Christopher Risi<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
