@@ -1,12 +1,16 @@
-# Paper Review - 
+(paper:summaries:emotions:)=
+# (Paper Title)
 
-## Literature Review
+## Paper Review - 
 
-## What is the researcher doing?
+**Paper:** []()
 
-## Why did they do it that way?
+### What is the researcher doing?/What question are they trying to answer?
 
-## What are other ways of doing it?
+### Why did they do it that way? 
 
-## How is it useful to me?
+### What are other ways of doing it?
 
+### How is it useful to me?
+
+### Literature Review
