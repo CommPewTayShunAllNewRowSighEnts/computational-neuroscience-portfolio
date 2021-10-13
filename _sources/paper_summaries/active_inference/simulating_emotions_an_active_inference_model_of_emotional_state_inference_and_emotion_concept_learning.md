@@ -77,7 +77,6 @@ This is from [Figure 2](https://www.frontiersin.org/files/Articles/489395/fpsyg-
 ```
 
 
-
 ### What are other ways of doing it? Or, how can this work be extended? 
 
 

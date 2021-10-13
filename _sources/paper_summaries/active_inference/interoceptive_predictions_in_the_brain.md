@@ -1,9 +1,9 @@
-(paper:summaries:emotions:)=
-# (Paper Title)
+(paper:summaries:emotions:interoceptive_predictions_in_the_brain)=
+# Interoceptive predictions in the brain
 
-## Paper Review - 
+## Paper Review
 
-**Paper:** []()
+**Paper:** [Barrett and Simmons, 2015](https://www.nature.com/articles/nrn3950)
 
 ### What is the researcher doing?/What question are they trying to answer?
 
