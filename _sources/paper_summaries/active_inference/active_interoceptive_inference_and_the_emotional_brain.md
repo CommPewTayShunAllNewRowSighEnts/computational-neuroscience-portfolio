@@ -1,4 +1,4 @@
-(paper:summaries:emotions:active_interoceptive_inference_emotional_ brain)=
+(paper:summaries:emotions:active_interoceptive_inference_emotional_brain)=
 # Active interoceptive inference and the emotional brain
 
 ## Paper Review - 

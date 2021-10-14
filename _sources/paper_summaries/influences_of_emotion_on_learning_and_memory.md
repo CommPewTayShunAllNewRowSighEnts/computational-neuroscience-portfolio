@@ -1,3 +1,4 @@
+(paper:summaries:emotions:influences_emotion_learning_memory)=
 # The Influences of Emotion on Learning and Memory
 
 ## Paper Review 
