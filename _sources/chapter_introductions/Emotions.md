@@ -10,4 +10,5 @@
 - [What is mood? A computational perspective](paper:summaries:emotions:what_is_mood__a_computational_perspective)
 - [Interoceptive predictions in the brain](paper:summaries:emotions:interoceptive_predictions_in_the_brain)
 - [Active interoceptive inference and the emotional brain](paper:summaries:emotions:active_interoceptive_inference_emotional_brain)
+- [Active Inference: A Process Theory ](paper:summaries:emotions:active_inference_a_process_theory)
 
