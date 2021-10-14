@@ -54,8 +54,8 @@ This article has three sections.
       - (Burgess, Barry, & O’Keefe, 2007; Lisman & Redish, 2009)
       - (Huk & Shadlen, 2005, Gold & Shadlen, 2007; Hunt et al., 2012; Solway & Botvinick, 2012; de Lafuente, Jazayeri, & Shadlen, 2015; FitzGerald, Moran, Friston, & Dolan, 2015; Latimer, Yates, Meister, Huk, & Pillow, 2015)
 3. Context Learning
-- illustrates the transfer of dopamine responses to conditioned stimuli, as agents become familiar with experimental contingencies
-- a brief demonstration of epistemic foraging
+   - illustrates the transfer of dopamine responses to conditioned stimuli, as agents become familiar with experimental contingencies
+   - a brief demonstration of epistemic foraging
 
 ### How is it useful to me?
 - In particular the appendix of this article provides great detail on how active inference can be implemented in a simulation.
