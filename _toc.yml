@@ -21,8 +21,9 @@ parts:
         - file: paper_summaries/active_inference/hierarchical_basis_of_neurovisceral_integration
         - file: paper_summaries/active_inference/what_is_mood__a_computational_perspective
         - file: paper_summaries/active_inference/interoceptive_inference_emotion_and_the_embodied_self
+        - file: paper_summaries/active_inference/active_inference_a_process_theory
       - file: paper_summaries/simple_foraging_robots_with_emotional_overlay
-      - file: paper_summaries/influences_of_emotion_on_learning_and_memory.md
+      - file: paper_summaries/influences_of_emotion_on_learning_and_memory
     - file: chapter_introductions/Exploration_Curiosity
       sections:
       - file: paper_summaries/fractional_binding_in_vector_symbolic_representations

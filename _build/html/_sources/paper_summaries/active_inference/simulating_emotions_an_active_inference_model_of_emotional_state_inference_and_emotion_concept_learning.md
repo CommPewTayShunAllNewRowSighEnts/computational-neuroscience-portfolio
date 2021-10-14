@@ -76,7 +76,6 @@ In a real-world setting, directly computing model evidence becomes mathematicall
 This is from [Figure 2](https://www.frontiersin.org/files/Articles/489395/fpsyg-10-02844-HTML/image_m/fpsyg-10-02844-g002.jpg) of the article 
 ```
 
-
 ### What are other ways of doing it? Or, how can this work be extended? 
 
 
