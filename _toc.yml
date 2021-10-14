@@ -15,7 +15,7 @@ parts:
       - file: paper_summaries/active_inference_emotion.md
         sections:
         - file: paper_summaries/active_inference/simulating_emotions_an_active_inference_model_of_emotional_state_inference_and_emotion_concept_learning
-        - file: paper_summaries/active_inference/emotional_valence_and_the_free-energy_principle
+        - file: paper_summaries/active_inference/emotional_valence_and_free-energy_principle
         - file: paper_summaries/active_inference/interoceptive_predictions_in_the_brain
         - file: paper_summaries/active_inference/active_interoceptive_inference_and_the_emotional_brain
         - file: paper_summaries/active_inference/hierarchical_basis_of_neurovisceral_integration

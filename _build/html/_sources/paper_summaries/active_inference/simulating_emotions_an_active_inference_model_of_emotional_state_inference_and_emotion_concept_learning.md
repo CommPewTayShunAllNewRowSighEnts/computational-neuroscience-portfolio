@@ -70,7 +70,7 @@ In a real-world setting, directly computing model evidence becomes mathematicall
     - This decomposition explains why agents that minimize expected free energy will first select exploratory policies that minimize uncertainty in a new environment (often called the “epistemic value” component of expected free energy).
     - Once uncertainty is resolved, the agent then selects policies that exploit that environment to maximize her prior preferences (often called the “pragmatic value” component of expected free energy). 
 
-```{figure} ../paper_summaries/Active_Inference_Model.jpg
+```{figure} ../active_inference/images/Active_Inference_Model.jpg
 :name: active-inference
 
 This is from [Figure 2](https://www.frontiersin.org/files/Articles/489395/fpsyg-10-02844-HTML/image_m/fpsyg-10-02844-g002.jpg) of the article 
