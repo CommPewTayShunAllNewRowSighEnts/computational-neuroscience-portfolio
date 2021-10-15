@@ -19,4 +19,5 @@
 
 ### Low Priority
 - [The hierarchical basis of neurovisceral integration](paper:summaries:emotions:hierarchical_basis_neurovisceral_integration)
-= [Learning and inference in the brain](paper:summaries:emotions:learning_and_inference_in_the_brain)
+- [Learning and inference in the brain](paper:summaries:emotions:learning_and_inference_in_the_brain)
+- [Bayesian theories of conditioning in a changing world](paper:summaries:emotions:Bayesian_theories_of_conditioning_in_a_changing_world)

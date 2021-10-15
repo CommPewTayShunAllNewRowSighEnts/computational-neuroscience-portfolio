@@ -26,6 +26,7 @@ parts:
         - file: paper_summaries/active_inference/a_free_energy_principle_for_the_brain
         - file: paper_summaries/active_inference/learning_and_inference_in_the_brain
         - file: paper_summaries/active_inference/the_free_energy_principle__a_unified_brain_theory
+        - file: paper_summaries/active_inference/Bayesian_theories_of_conditioning_in_a_changing_world
       - file: paper_summaries/simple_foraging_robots_with_emotional_overlay
       - file: paper_summaries/influences_of_emotion_on_learning_and_memory
     - file: chapter_introductions/Exploration_Curiosity
