@@ -196,6 +196,11 @@
        The free-energy principle: a unified brain theory?
       </a>
      </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="Bayesian_theories_of_conditioning_in_a_changing_world.html">
+       Bayesian theories of conditioning in a changing world
+      </a>
+     </li>
     </ul>
    </li>
    <li class="toctree-l2">
@@ -389,6 +394,13 @@
     <a class="reference internal nav-link" href="#what-is-the-researcher-doing">
      What is the researcher doing?
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#emotional-regulation-of-estimation-uncertainty">
+       Emotional regulation of estimation uncertainty
+      </a>
+     </li>
+    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#why-did-they-do-it-that-way">
@@ -482,6 +494,49 @@
 <li><p><strong>Volatility</strong> refers to slow and continuous changes in states of the world, and has usually been modelled by making estimation uncertainty follow some latent stochastic process.</p></li>
 <li><p><strong>Unexpected uncertainty</strong> arises from surprising sensory inputs caused by discrete and fast changes in states of the world, and calls for forgetting the past and restarting learning from new sensory data.</p></li>
 </ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Two classes of emotions have been referred to as factive and epistemic</p>
+<p><strong>Factive</strong>: large group of emotions, which includes happiness, unhappiness, relief and disappointment, is related to certain (firm) beliefs that states of affairs obtain.</p>
+<p><strong>Epistemic</strong>: smaller group of emotions, mainly represented by hope and fear, is related to uncertain beliefs.</p>
+<p>factive and epistemic emotions are indeed associated with low and high levels of uncertainty, respectively, but this comes as a consequence and not as a necessary condition of their definition (see Results).</p>
+</div>
+<ul class="simple">
+<li><p>since free-energy is minimized for each level of the hierarchical model separately, their formulation also predicts that <strong>different emotions can occur concurrently</strong>.</p></li>
+</ul>
+<div class="figure align-default" id="emotoinal-states-and-free-energy">
+<img alt="../../_images/emotoinal_states_and_free_energy.png" src="../../_images/emotoinal_states_and_free_energy.png" />
+<p class="caption"><span class="caption-number">Fig. 6 </span><span class="caption-text">This is from <a class="reference external" href="https://journals.plos.org/ploscompbiol/article/figure?id=10.1371/journal.pcbi.1003094.t001">Table 1</a> of the article.</span><a class="headerlink" href="#emotoinal-states-and-free-energy" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="emotional-regulation-of-estimation-uncertainty">
+<h4>Emotional regulation of estimation uncertainty<a class="headerlink" href="#emotional-regulation-of-estimation-uncertainty" title="Permalink to this headline">¶</a></h4>
+<p>This is interesting:</p>
+<ul class="simple">
+<li><p>Emotional valence and some basic forms of emotion can be elicited by the dynamics of free-energy.</p>
+<ul>
+<li><p>What, however, is the function of these quantities in a scheme originally developed to explain perception, learning and action? They propose:</p>
+<ul>
+<li><p>valence, computed as the negative rate of change of free-energy, is crucial because it informs biological agents about unexpected changes in their world.</p>
+<ul>
+<li><p>When <strong>valence is positive</strong>, sensory inputs fulfil the agent’s expectations and the probability of unexpected changes is low.</p></li>
+<li><p>When <strong>valence is negative</strong>, the agent’s expectations are violated and unexpected changes in the world are likely to have taken place.</p></li>
+</ul>
+</li>
+<li><p>In settings where recent information is a better predictor of states of the world than past information, that is, in a changing world, recent information must be more heavily weighted and, therefore, the learning rate should be high.</p></li>
+<li><p>Conversely, in a stationary world, in which past and recent information are equally informative, the learning rate should be low in order to take into account both past and recent information.</p></li>
+</ul>
+</li>
+<li><p>They formalise this notion in terms of emotional meta-learning in which estimation uncertainty is determined not just by free-energy but by the rate of change of free-energy.</p>
+<ul>
+<li><p>when the free-energy associated with posterior beliefs about states at a particular level in the agent’s hierarchical model is increasing, the posterior certainty about these states decreases.</p></li>
+<li><p>the agent interprets decreasing evidence for its estimates of states of the world as evidence that it is too confident about those states.</p></li>
+<li><p><strong>This can be implemented fairly simply with the augmented Bayesian update</strong></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
 </div>
 <div class="section" id="why-did-they-do-it-that-way">
 <h3>Why did they do it that way?<a class="headerlink" href="#why-did-they-do-it-that-way" title="Permalink to this headline">¶</a></h3>
@@ -520,6 +575,11 @@
 </ol>
 </li>
 <li><p><strong>this article presents the free-energy principle that was easiest for me to understand… relatively speaking</strong></p></li>
+<li><p>In biologically plausible implementations of free energy minimisation, precision (i.e., the inverse of uncertainty) is encoded by the gain of cells reporting prediction error.</p>
+<ul>
+<li><p>This directly implicates the classical ascending neuromodulatory transmitter systems like dopamine, acetylcholine and norepinephrine in the encoding of uncertainty.</p></li>
+</ul>
+</li>
 </ul>
 </div>
 <div class="section" id="possibly-relevant-background-literature-from-article">

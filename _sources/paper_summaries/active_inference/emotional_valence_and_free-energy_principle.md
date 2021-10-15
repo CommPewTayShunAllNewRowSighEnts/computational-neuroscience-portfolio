@@ -51,8 +51,39 @@ Crucially, when inferring and learning the causes of their sensations in a chang
 - **Volatility** refers to slow and continuous changes in states of the world, and has usually been modelled by making estimation uncertainty follow some latent stochastic process.
 - **Unexpected uncertainty** arises from surprising sensory inputs caused by discrete and fast changes in states of the world, and calls for forgetting the past and restarting learning from new sensory data. 
 
+```{note}
+Two classes of emotions have been referred to as factive and epistemic
 
+**Factive**: large group of emotions, which includes happiness, unhappiness, relief and disappointment, is related to certain (firm) beliefs that states of affairs obtain.
 
+**Epistemic**: smaller group of emotions, mainly represented by hope and fear, is related to uncertain beliefs.
+
+factive and epistemic emotions are indeed associated with low and high levels of uncertainty, respectively, but this comes as a consequence and not as a necessary condition of their definition (see Results).
+```
+
+- since free-energy is minimized for each level of the hierarchical model separately, their formulation also predicts that **different emotions can occur concurrently**.
+
+```{figure} ../active_inference/images/emotoinal_states_and_free_energy.png
+:name: emotoinal_states_and_free_energy
+
+This is from [Table 1](https://journals.plos.org/ploscompbiol/article/figure?id=10.1371/journal.pcbi.1003094.t001) of the article.
+```
+
+#### Emotional regulation of estimation uncertainty
+This is interesting:
+
+- Emotional valence and some basic forms of emotion can be elicited by the dynamics of free-energy. 
+  - What, however, is the function of these quantities in a scheme originally developed to explain perception, learning and action? They propose:
+    - valence, computed as the negative rate of change of free-energy, is crucial because it informs biological agents about unexpected changes in their world. 
+      - When **valence is positive**, sensory inputs fulfil the agent's expectations and the probability of unexpected changes is low. 
+      - When **valence is negative**, the agent's expectations are violated and unexpected changes in the world are likely to have taken place.
+    - In settings where recent information is a better predictor of states of the world than past information, that is, in a changing world, recent information must be more heavily weighted and, therefore, the learning rate should be high. 
+    - Conversely, in a stationary world, in which past and recent information are equally informative, the learning rate should be low in order to take into account both past and recent information.
+  - They formalise this notion in terms of emotional meta-learning in which estimation uncertainty is determined not just by free-energy but by the rate of change of free-energy.
+    - when the free-energy associated with posterior beliefs about states at a particular level in the agent's hierarchical model is increasing, the posterior certainty about these states decreases.
+    - the agent interprets decreasing evidence for its estimates of states of the world as evidence that it is too confident about those states. 
+    - **This can be implemented fairly simply with the augmented Bayesian update**
+    
 ### Why did they do it that way?
 - The **free-energy principle has been proposed as a unified Bayesian account of perception, learning and action.** 
 - Despite the inextricable link between emotion and cognition, emotion has not yet been formulated under a unified Bayesian framework. 
@@ -72,6 +103,9 @@ Crucially, when inferring and learning the causes of their sensations in a chang
   2. Emotion is coupled back to inference using a form of regularization or meta-learning. In other words, changes in the quality of inference are used to regularize the rate of evidence accumulation to provide adaptive learning rates. These learning rates correspond to expected uncertainty about inferences, under hierarchical models of the world.
 
 - **this article presents the free-energy principle that was easiest for me to understand... relatively speaking**
+
+- In biologically plausible implementations of free energy minimisation, precision (i.e., the inverse of uncertainty) is encoded by the gain of cells reporting prediction error. 
+  - This directly implicates the classical ascending neuromodulatory transmitter systems like dopamine, acetylcholine and norepinephrine in the encoding of uncertainty. 
 
 ### Possibly Relevant Background Literature From Article
 1. Payzan-LeNestour E, Bossaerts P (2011) Risk, unexpected uncertainty, and estimation uncertainty: Bayesian learning in unstable settings. PLoS Comput Biol 7: e1001048.
